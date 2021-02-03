@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using PartyInvites.Models;
 
 namespace PartyInvites.Controllers
 {
@@ -9,6 +10,17 @@ namespace PartyInvites.Controllers
     {
         public IActionResult Index()
         {
+            return View();
+        }
+        [HttpGet]
+        public ViewResult RsvpForm()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            //TODO: store response from guest
             return View();
         }
     }
